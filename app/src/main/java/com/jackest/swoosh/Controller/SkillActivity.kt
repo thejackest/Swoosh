@@ -4,34 +4,32 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.jackest.swoosh.Utilities.EXTRA_LEAGUE
+import com.jackest.swoosh.Model.Player
+import com.jackest.swoosh.Utilities.EXTRA_PLAYER
 import com.jackest.swoosh.R
-import com.jackest.swoosh.Utilities.SKILL
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
-    var league =""
-    var skill=""
+    //var league =""
+    lateinit var player : Player //var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league = intent.getStringExtra(EXTRA_LEAGUE)
-        println(league)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
     }
     fun beginnerClicked(view: View){
-        skill = "beginner"
+        player.skill = "beginner"
         ballerBtn.isChecked =false
     }
 
     fun ballerClicked(view: View){
         beginnerBtn.isChecked =false
-        skill = "baller"
+        player.skill = "baller"
     }
     fun finishClicked(view: View){
-        if(skill!=""){
+        if(player.skill!=""){
             val finishActivity = Intent(this, FinishActivity::class.java)
-            finishActivity.putExtra(EXTRA_LEAGUE,league)//pass value
-            finishActivity.putExtra(SKILL,skill)
+            finishActivity.putExtra(EXTRA_PLAYER,player)//pass value
             startActivity(finishActivity)
         }else{
             Toast.makeText(this,"Please select the skill", Toast.LENGTH_SHORT).show()
