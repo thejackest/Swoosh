@@ -1,4 +1,4 @@
-package com.jackest.swoosh
+package com.jackest.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

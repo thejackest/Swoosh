@@ -4,8 +4,6 @@
     <string name="logo">logo</string>
     <string name="desired_league">Desired League</string>
     <string name="mens">Mens</string>
-
-    <string name="togglebutton">ToggleButton</string>
     <string name="womens">Womens</string>
     <string name="co_ed">Co-ed</string>
     <string name="next">NEXT</string>
@@ -15,11 +13,8 @@
     <string name="find_a_team_in_you_city_and_dominate_the_league">Find a team in you city, and dominate the league.</string>
     <string name="get_started">GET STARTED</string>
     <string name="i_am_a">I am a:</string>
-    <string name="togglebutton">ToggleButton</string>
-    <string name="beginner">BEGINNER</string>
     <string name="beginner">BEGINNER</string>
     <string name="togglebutton">ToggleButton</string>
-    <string name="baller">BALLER</string>
     <string name="baller">BALLER</string>
     <string name="finish">FINISH</string>
 </resources>
